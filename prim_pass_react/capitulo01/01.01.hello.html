@@ -14,9 +14,13 @@
     <script>
         //código da aplicação
         ReactDOM.render(
-            <h1 id="titulo">
-                <span><em>Hell</em>o</span> React com JSX!
-            </h1>,            
+            React.DOM.h1(
+                {
+                    className: "pretty",
+                    htmlFor: "me"
+                },
+                "Hello Reactjs!"
+            ),            
             document.getElementById("app")
         );
     </script>
