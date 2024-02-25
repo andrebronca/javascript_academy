@@ -16,8 +16,11 @@
         ReactDOM.render(
             React.DOM.h1(
                 {id:"titulo",},
-                React.DOM.span(null, "Hello ") ,
-            "World!"
+                React.DOM.span(null, 
+                    React.DOM.em(null, "Hell"),
+                "o"
+                ),
+                " React!"
             ),            
             document.getElementById("app")
         );
