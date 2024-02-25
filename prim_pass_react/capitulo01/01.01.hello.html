@@ -14,8 +14,11 @@
     <script>
         //código da aplicação
         ReactDOM.render(
-            React.DOM.h1({id:"titulo",}, "Hello World!"),
-            
+            React.DOM.h1(
+                {id:"titulo",},
+                React.DOM.span(null, "Hello ") ,
+            "World!"
+            ),            
             document.getElementById("app")
         );
     </script>
