@@ -1,0 +1,7 @@
+
+Total de páginas: 273
+Ano de publicação: 2019
+Idioma: Português Brasileiro
+
+Código fonte em:
+    https://github.com/stoyan/reactbook
