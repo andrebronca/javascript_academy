@@ -14,17 +14,14 @@
     <script>
         var Componente = React.createClass({
             render: function(){
-                return React.DOM.span(null, "I'm so custom");
+                return React.DOM.span(null, "My name is "+ this.props.name);
             }
         });
 
-        //criar várias instâncias
-        var ComponenteFactory = React.createFactory(Componente);
-
         ReactDOM.render(
-            //React.createElement(Componente),
-            //ComponenteFactory(),
-            React.createElement("span",null,"Criando componente"),
+            React.createElement(Componente, {
+                name: "Bob",
+            }),
             document.getElementById("app")
         );
     </script>
