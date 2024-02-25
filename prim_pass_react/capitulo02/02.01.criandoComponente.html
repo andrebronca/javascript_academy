@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criando Componente</title>
+    <title>Criando Componente Stateless</title>
 </head>
 <body>
     <div id="app">
@@ -19,6 +19,7 @@
                 familyName: React.PropTypes.string.isRequired,
                 address: React.PropTypes.string,
             },
+            //propriedades opcionais, sem isRequired
             getDefaultProps: function(){
                 return {
                     middleName: '',
@@ -36,6 +37,7 @@
 
         ReactDOM.render(
             React.createElement(Componente, {
+                //propriedades isRequired
                 firstName: "André",
                 familyName: "Bronca",
             }),
