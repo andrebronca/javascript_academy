@@ -14,17 +14,30 @@
     <script>
         var Componente = React.createClass({
             propTypes: {
-                name: React.PropTypes.string.isRequired,
+                firstName: React.PropTypes.string.isRequired,
+                middleName: React.PropTypes.string,
+                familyName: React.PropTypes.string.isRequired,
+                address: React.PropTypes.string,
+            },
+            getDefaultProps: function(){
+                return {
+                    middleName: '',
+                    address: 'n/a',
+                };
             },
             render: function(){
-                return React.DOM.span(null, "My name is "+ this.props.name);
+                return React.DOM.span(null, 
+                    this.props.firstName +" "+
+                    this.props.middleName +" "+
+                    this.props.familyName +", "+
+                    'Endereço: '+ this.props.address);
             }
         });
 
         ReactDOM.render(
             React.createElement(Componente, {
-                //name: "André", Failed propType: Required prop `name` was not specified in `Constructor`.
-                //name: 1, Failed propType: Invalid prop `name` of type `number` supplied to `Constructor`, expected `string`.
+                firstName: "André",
+                familyName: "Bronca",
             }),
             document.getElementById("app")
         );
