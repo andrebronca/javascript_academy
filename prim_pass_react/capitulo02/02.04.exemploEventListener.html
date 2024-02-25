@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- exemplo do modelo antigo de eventListener, funciona bem em javascript-->
+    <div id="parent">
+        <button id="ok">Ok</button>
+        <button id="cancel">Cancel</button>
+    </div>
+
+    <script>
+        /* Para funcionar em todos os navegadores, tem que adicionar:
+            attachEvent além de addEventListener
+            var event = event || window.event
+            var button = event.target || event.srcElement
+        */
+        document.getElementById('parent').addEventListener('click', function(event){
+            var button = event.target;
+
+            //executa tarefas diferentes de acordo com o botão clicado
+            switch(button.id){
+                case 'ok':
+                    console.log('ok clicado');
+                    break;
+                case 'cancel':
+                    console.log('cancel clicado');
+                    break;
+                default:
+                    new Error('Unexpected button ID');
+            };
+        });
+    </script>
+</body>
+</html>
